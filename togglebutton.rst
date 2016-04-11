@@ -16,7 +16,7 @@ Methods
 =======
 To retrieve the state of a ToggleButton use::
 
-  active = togglebutton.get_active()
+  togglebutton.get_active()
 
 Setting the state of the ToggleButton programatically can be done with::
 
@@ -26,7 +26,7 @@ When *active* is set to ``True``, the ToggleButton will appear in a depressed st
 
 An inconsistent state can be set on a ToggleButton which can be used to indicate whether other widgets are at the correct values. For example, if three ToggleButtons are a mix of active and inactive, the fourth may display an inconsistent state. This can be retrieved with::
 
-  incosistent = togglebutton.get_inconsistent()
+  togglebutton.get_inconsistent()
 
 Set the inconsistent parameter on the following method to ``True`` to activate the inconsistent state::
 
