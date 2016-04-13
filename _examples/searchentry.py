@@ -5,6 +5,7 @@ from gi.repository import Gtk
 class SearchEntry(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("SearchEntry")
         self.connect("destroy", Gtk.main_quit)
 
         searchentry = Gtk.SearchEntry()

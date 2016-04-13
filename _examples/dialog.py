@@ -7,8 +7,8 @@ class Dialog(Gtk.Dialog):
         Gtk.Dialog.__init__(self)
         self.set_title("Dialog")
         self.set_default_size(400, 300)
-        self.add_button("OK", Gtk.ResponseType.OK)
-        self.add_button("Cancel", Gtk.ResponseType.CANCEL)
+        self.add_button("_OK", Gtk.ResponseType.OK)
+        self.add_button("_Cancel", Gtk.ResponseType.CANCEL)
         self.connect("response", self.on_response)
 
         label = Gtk.Label("This is a Dialog example.")

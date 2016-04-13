@@ -2,33 +2,50 @@
 
 from gi.repository import Gtk
 
-def display_message_dialog(button, message_type):
-    messagedialog = Gtk.MessageDialog(message_format="MessageDialog")
-    messagedialog.set_property("message-type", message_type)
+class MessageDialog(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self)
+        self.set_title("MessageDialog")
+        self.connect("destroy", Gtk.main_quit)
 
-    messagedialog.run()
-    messagedialog.destroy()
+        buttonbox = Gtk.ButtonBox()
+        self.add(buttonbox)
 
-window = Gtk.Window()
-window.connect("destroy", Gtk.main_quit)
+        buttonInformation = Gtk.Button(label="Information")
+        buttonInformation.message_type = Gtk.MessageType.INFO
+        buttonInformation.connect("clicked", self.on_message_clicked)
+        buttonbox.add(buttonInformation)
+        buttonWarning = Gtk.Button(label="Warning")
+        buttonWarning.message_type = Gtk.MessageType.WARNING
+        buttonWarning.connect("clicked", self.on_message_clicked)
+        buttonbox.add(buttonWarning)
+        buttonQuestion = Gtk.Button(label="Question")
+        buttonQuestion.message_type = Gtk.MessageType.QUESTION
+        buttonQuestion.connect("clicked", self.on_message_clicked)
+        buttonbox.add(buttonQuestion)
+        buttonError = Gtk.Button(label="Error")
+        buttonError.message_type = Gtk.MessageType.ERROR
+        buttonError.connect("clicked", self.on_message_clicked)
+        buttonbox.add(buttonError)
+        buttonOther = Gtk.Button(label="Other")
+        buttonOther.message_type = Gtk.MessageType.OTHER
+        buttonOther.connect("clicked", self.on_message_clicked)
+        buttonbox.add(buttonOther)
 
-grid = Gtk.Grid()
-grid.set_column_spacing(5)
-window.add(grid)
+        self.messagedialog = Gtk.MessageDialog(message_format="MessageDialog")
+        self.messagedialog.set_transient_for(self)
+        self.messagedialog.set_title("MessageDialog")
+        self.messagedialog.set_markup("<span size='12000'><b>This is a MessageDialog widget.</b></span>")
+        self.messagedialog.format_secondary_text("The MessageDialog can display a main message, and further secondary content.")
+        self.messagedialog.add_button("_Close", Gtk.ResponseType.CLOSE)
 
-buttonInfo = Gtk.Button(label="Information")
-buttonInfo.connect("clicked", display_message_dialog, Gtk.MessageType.INFO)
-grid.attach(buttonInfo, 0, 0, 1, 1)
-buttonWarning = Gtk.Button(label="Warning")
-buttonWarning.connect("clicked", display_message_dialog, Gtk.MessageType.WARNING)
-grid.attach(buttonWarning, 1, 0, 1, 1)
-buttonQuestion = Gtk.Button(label="Question")
-buttonQuestion.connect("clicked", display_message_dialog, Gtk.MessageType.QUESTION)
-grid.attach(buttonQuestion, 2, 0, 1, 1)
-buttonError = Gtk.Button(label="Error")
-buttonError.connect("clicked", display_message_dialog, Gtk.MessageType.ERROR)
-grid.attach(buttonError, 3, 0, 1, 1)
+    def on_message_clicked(self, button):
+        self.messagedialog.set_property("message-type", button.message_type)
 
+        self.messagedialog.run()
+        self.messagedialog.hide()
+
+window = MessageDialog()
 window.show_all()
 
 Gtk.main()

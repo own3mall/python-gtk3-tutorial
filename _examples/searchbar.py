@@ -6,6 +6,7 @@ class SearchBar(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
         self.set_default_size(250, -1)
+        self.set_title("SearchBar")
         self.connect("key-press-event", self.on_key_event)
         self.connect("destroy", Gtk.main_quit)
 
@@ -23,9 +24,9 @@ class SearchBar(Gtk.Window):
         self.searchbar.add(searchentry)
 
     def on_key_event(self, widget, event):
-        mod = Gtk.accelerator_get_label(event.keyval, event.state)
+        shortcut = Gtk.accelerator_get_label(event.keyval, event.state)
 
-        if mod == "Ctrl+F" or mod == "Ctrl+Mod2+F":
+        if shortcut in ("Ctrl+F", "Ctrl+Mod2+F"):
             if self.searchbar.get_search_mode():
                 self.searchbar.set_search_mode(False)
             else:

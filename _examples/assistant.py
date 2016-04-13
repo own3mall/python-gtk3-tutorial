@@ -30,7 +30,7 @@ class Assistant(Gtk.Assistant):
         self.set_page_complete(box, True)
 
         self.complete = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        age = self.append_page(self.complete)
+        self.append_page(self.complete)
         self.set_page_type(self.complete, Gtk.AssistantPageType.PROGRESS)
         self.set_page_title(self.complete, "Page 3: Progress")
         label = Gtk.Label(label="A 'Progress' page is used to prevent changing pages within the Assistant before a long-running process has completed. The 'Continue' button will be marked as insensitive until the process has finished. Once finished, the button will become sensitive.")
@@ -60,7 +60,6 @@ class Assistant(Gtk.Assistant):
 
     def on_apply_clicked(self, *args):
         print("The 'Apply' button has been clicked")
-        Gtk.main_quit()
 
     def on_close_clicked(self, *args):
         print("The 'Close' button has been clicked")

@@ -5,6 +5,7 @@ from gi.repository import Gtk
 class Calendar(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("Calendar")
         self.connect("destroy", Gtk.main_quit)
 
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=2)

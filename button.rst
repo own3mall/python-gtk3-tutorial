@@ -31,7 +31,7 @@ The *relief_style* parameter can be set as follows, with the default being ``Gtk
 It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function.
 
   button.set_use_underline(True)
-  
+
 .. note:
 
   Mnemonic shortcuts are highly useful as an accessibility feature and should be used wherever possible. They are particularly important to people with disabilities as they provide quick access to common functions. To access the function using the mnemonic, hold down :kbd:`ALT` and the appropriate character.
@@ -48,7 +48,7 @@ To force a button to show an image, even if the option is disabled globally, use
 
 .. note:
 
-  Using ``.set_always_show_image()`` should only be used when the button would be hard to identify without the image. In other cases, the button should follow the global setting.
+  Using ``.set_always_show_image()`` should only be used when the button functionality would be hard to identify without the image. In other cases, the button should follow the global setting.
 
 =======
 Signals
