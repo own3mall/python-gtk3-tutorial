@@ -12,6 +12,7 @@ class Calendar(Gtk.Window):
         self.add(hbox)
 
         self.calendar = Gtk.Calendar()
+        self.calendar.connect("day-selected-double-click", self.on_date_selected)
         hbox.pack_start(self.calendar, True, True, 0)
 
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
@@ -34,6 +35,12 @@ class Calendar(Gtk.Window):
         checkbuttonShowWeeks = Gtk.CheckButton(label="Show Week Numbers")
         checkbuttonShowWeeks.connect("toggled", self.on_show_weeks_change)
         vbox.pack_start(checkbuttonShowWeeks, False, False, 0)
+
+    def on_date_selected(self, calendar):
+        year, month, day = self.calendar.get_date()
+        month += 1
+
+        print("Date selected: %i/%i/%i" % (year, month, day))
 
     def on_show_heading_change(self, checkbutton):
         self.calendar.set_property("show-heading", checkbutton.get_active())
