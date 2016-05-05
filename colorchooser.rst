@@ -13,8 +13,8 @@ When *use_alpha* is set to ``True``, a slider appears within the dialog to contr
 
 To retrieve the colour from the ColorChooser use::
 
-  color = colorchooser.get_color()
-  rgba = colorchooser.get_rgba()
+  colorchooser.get_color()
+  colorchooser.get_rgba()
 
 The ``.get_color()`` method returns a GdkColor object with associated values for red, green and blue. Alternatively, if your ColorChooser allows the selection of transparency values then ``.get_rgba()`` can be used. This also returns values for red, green and blue, and the transparency value, and is known as an GdkRGBA object. All the values returned are between ``0.0`` and ``1.0``.
 

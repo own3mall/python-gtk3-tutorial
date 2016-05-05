@@ -64,8 +64,8 @@ When *show_button* is set to ``True``, a button is shown which allows the InfoBa
 
 The MessageDialog is constructed using several predefined :doc:`box` widgets which give the shape of the dialog. The *content_area* is the place where you place widgets. The *action_area* is the place where buttons and other actionable widgets are place. Both can be retrieved with the methods::
 
-  content_area = infobar.get_content_area()
-  action_area = infobar.get_action_area()
+  infobar.get_content_area()
+  infobar.get_action_area()
 
 =======
 Signals

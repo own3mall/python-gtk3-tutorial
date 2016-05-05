@@ -11,17 +11,17 @@ Methods
 =======
 To retrieve the font family, attributes (bold, italic, etc), or the size selected, use the methods::
 
-  font_family = fontchooser.get_font_family()
-  font_face = fontchooser.get_font_face()
-  font_size = fontchooser.get_font_size()
+  fontchooser.get_font_family()
+  fontchooser.get_font_face()
+  fontchooser.get_font_size()
 
 Finally, the call for retrieving the actual font selected is::
 
-  font = fontchooser.get_font()
+  fontchooser.get_font()
 
 To retrieve a normalised string from the FontChooser, describing the font selected use::
 
-  font_desc = fontchooser.get_font_desc()
+  fontchooser.get_font_desc()
 
 The ``.get_font_desc()`` method will return a string such as "Cantarell Bold Italic 12".
 

@@ -7,9 +7,13 @@ Methods
 =======
 To retrieve the application information from the AppChooser use::
 
-  app_info = appchooser.get_app_info()
+  appchooser.get_app_info()
 
-The *app_info* object allows for the retrieval of a range of information such as name, description, and application location.
+The method allows for the retrieval of a range of information such as name, description, and application location.
+
+Retrieval of the content type associated with the AppChooser can be fetched by calling::
+
+  appchooser.get_content_type()
 
 The AppChooser can be refreshed manually with the call::
 

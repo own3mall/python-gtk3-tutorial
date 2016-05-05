@@ -24,11 +24,11 @@ Alternatively, the label can be set with::
 
 The method to retrive the *uri* from the LinkButton is::
 
-  uri = linkbutton.get_uri()
+  linkbutton.get_uri()
 
 The following method exists to check whether the link has been visited::
 
-  visited = linkbutton.get_visited()
+  linkbutton.get_visited()
 
 =======
 Signals

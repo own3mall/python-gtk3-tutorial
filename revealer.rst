@@ -1,6 +1,6 @@
 Revealer
 ========
-The Revealer widget behaves similar to an :doc:`expander`, however does this using an animation. The child widget can be hidden or unhidden based on the action of another widget such as a button. 
+The Revealer widget behaves similar to an :doc:`expander`, however does this using an animation. The child widget can be hidden or unhidden based on the action of another widget such as a button.
 
 ===========
 Constructor
@@ -30,9 +30,9 @@ A number of transition types can be used to animate the Revealer using the metho
 
   revealer.set_transition_type(transition_type)
 
-The *transition_type* can be set to one of the following::
+The *transition_type* can be set to one of the following:
 
-*  ``Gtk.TransitionType.NONE``
+* ``Gtk.TransitionType.NONE``
 * ``Gtk.TransitionType.CROSSFADE``
 * ``Gtk.TransitionType.SLIDE_RIGHT``
 * ``Gtk.TransitionType.SLIDE_LEFT``

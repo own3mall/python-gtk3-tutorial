@@ -22,7 +22,7 @@ To set the name of the FileFilter use::
 
 Retrieving the name of a particular filter is possible using::
 
-  name = filefilter.get_name()
+  filefilter.get_name()
 
 To limit files which can be displayed by extension use::
 

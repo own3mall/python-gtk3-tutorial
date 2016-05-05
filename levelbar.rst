@@ -1,6 +1,6 @@
 LevelBar
 ========
-The LevelBar widget can be used as a level indicator. Typical usage cases would be displaying the strength of a password or the charge of a battery. 
+The LevelBar widget can be used as a level indicator. Typical usage cases would be displaying the strength of a password or the charge of a battery.
 
 ===========
 Constructor
@@ -25,8 +25,8 @@ A minimum and maximum value should be set on the LevelBar which defines the rang
 
 If required, the minimum and maximum values can also be retrieved::
 
-  min_value = levelbar.get_min_value()
-  max_value = levelbar.get_max_value()
+  levelbar.get_min_value()
+  levelbar.get_max_value()
 
 The actual level can then be displayed::
 
@@ -34,7 +34,7 @@ The actual level can then be displayed::
 
 To retrieve the value from the levelbar, use the method::
 
-  value = levelbar.get_value()
+  levelbar.get_value()
 
 The update mode of the LevelBar indicates how the widget updates when the value is changed. There are two modes for this::
 
@@ -58,7 +58,7 @@ To remove the offset value, call::
 
 Finally, retrieval of the offset value is possible via::
 
-  value = levelbar.get_offset_value(name)
+  levelbar.get_offset_value(name)
 
 =======
 Signals

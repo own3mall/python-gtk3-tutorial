@@ -12,6 +12,14 @@ The AccelGroup can be constructed using::
 =======
 Methods
 =======
+An accelerator is connected to the AccelGroup using the call::
+
+  accelgroup.connect(accel_key, modifiers, flags, closure)
+
+A previously connected accelerator can also be disconnected by::
+
+  accelgroup.disconnect(closure)
+
 To allow or prevent changes to the Accelerator's within the AccelGroup use::
 
   accelgroup.lock()
@@ -19,9 +27,9 @@ To allow or prevent changes to the Accelerator's within the AccelGroup use::
 
 The AccelGroup can also be checked to see whether it is locked using::
 
-  is_locked = accelgroup.get_is_locked()
+  accelgroup.get_is_locked()
 
-If ``True`` is returned to the *is_locked* variable, no accelerators may be added to the AccelGroup.
+If ``True`` is returned from the method, no accelerators may be added to the AccelGroup.
 
 =======
 Example

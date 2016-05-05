@@ -13,12 +13,14 @@ The EntryBuffer can be constructed using the following::
 
   entrybuffer = Gtk.EntryBuffer(text)
 
+The *text* string may be omitted, however any text entered will be displayed in Entry widgets connected to the EntryBuffer.
+
 =======
 Methods
 =======
 To retrieve text from the EntryBuffer, use the method::
 
-  text = entrybuffer.get_text()
+  entrybuffer.get_text()
 
 To set text on the EntryBuffer after construction::
 
@@ -40,7 +42,7 @@ The *position* parameter should be the starting position of the cursor. The *n_c
 
 Retrieval of the number of characters currently stored in the EntryBuffer is achieved by using::
 
-  length = entrybuffer.get_length()
+  entrybuffer.get_length()
 
 Setting the maximum number of characters that the EntryBuffer can accept construction can be completed with::
 
@@ -48,7 +50,7 @@ Setting the maximum number of characters that the EntryBuffer can accept constru
 
 To check the maximum length the EntryBuffer can accept::
 
-  length = entrybuffer.get_max_length()
+  entrybuffer.get_max_length()
 
 =======
 Signals

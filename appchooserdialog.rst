@@ -17,7 +17,7 @@ A *title* should be placed on the AppChooserDialog indicating the function::
 
 To ensure correct positioning of the dialog on the parent window, use::
 
-  appchooserdialog.set_parent(parent)
+  appchooserdialog.set_transient_for(parent)
 
 ..note :
 

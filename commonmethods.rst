@@ -16,12 +16,17 @@ The *visible* parameter when set to ``False`` removes the widget from view from 
 
 ::
 
+  .get_visible()
+
+The ``.get_visible()`` method returns ``True`` when the widget is being shown, and ``False`` when hidden.
+
+::
+
   .show()
   .show_all()
   .hide()
-  .hide_all()
 
-The ``.show()`` and ``.show_all()`` methods display widgets on screen, however ``.show_all()`` will display the parent and all subsequent child widgets. The ``.hide()`` and ``.hide_all()`` prompt GTK+ to do the inverse.
+The ``.show()`` and ``.show_all()`` methods display widgets on screen, however ``.show_all()`` will display the parent and all subsequent child widgets. The ``.hide()`` method prompts GTK+ to hide the widget from display.
 
 ::
 
@@ -49,7 +54,7 @@ The *can_focus* parameter when set to ``False`` prevents the widget from accepti
 
 ::
 
-  .vexpand(expand)
-  .hexpand(expand)
+  .set_vexpand(expand)
+  .set_hexpand(expand)
 
 Items added to a :doc:`grid` by default are shrunk to the size of the content they contain. When the *expand* parameter is set to ``True``, the item is sized to fit the space vertically, horizontally or both.

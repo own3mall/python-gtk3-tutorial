@@ -51,7 +51,7 @@ When *homogeneous* is set to True, the widgets will take the same size with the 
 
 To retrieve a widget located at a particular position within the Grid call::
 
-  child = grid.get_child_at(left, top)
+  grid.get_child_at(left, top)
 
 The *left* and *top* values should be specified as integer values identifying the location of the child.
 
