@@ -2,25 +2,27 @@
 
 from gi.repository import Gtk
 
-def item_activated(recentchoosermenu):
-    item = recentchooserwidget.get_current_item()
+class RecentChooserWidget(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self)
+        self.set_title('RecentChooserWidget')
+        self.set_default_size(300, 250)
+        self.set_border_width(5)
+        self.connect("destroy", Gtk.main_quit)
 
-    if item:
-        name = item.get_display_name()
-        uri = item.get_uri()
+        recentchooserwidget = Gtk.RecentChooserWidget()
+        recentchooserwidget.connect("item-activated", self.on_item_activated)
+        self.add(recentchooserwidget)
 
-        print("Item selected:")
-        print("Name:\t %s" % name)
-        print("URI:\t %s" % uri)
+    def on_item_activated(self, recentchooserwidget):
+        item = recentchooserwidget.get_current_item()
 
-window = Gtk.Window()
-window.set_default_size(300, 250)
-window.connect("destroy", Gtk.main_quit)
+        if item:
+            print("Item selected:")
+            print("Name:\t %s" % (item.get_display_name()))
+            print("URI:\t %s" % (item.get_uri()))
 
-recentchooserwidget = Gtk.RecentChooserWidget()
-recentchooserwidget.connect("item-activated", item_activated)
-window.add(recentchooserwidget)
-
+window = RecentChooserWidget()
 window.show_all()
 
 Gtk.main()

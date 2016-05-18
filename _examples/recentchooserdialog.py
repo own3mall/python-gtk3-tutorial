@@ -2,23 +2,25 @@
 
 from gi.repository import Gtk
 
-recentchooserdialog = Gtk.RecentChooserDialog()
-recentchooserdialog.set_title("RecentChooserDialog")
-recentchooserdialog.add_button("Cancel", Gtk.ResponseType.CANCEL)
-recentchooserdialog.add_button("OK", Gtk.ResponseType.OK)
-recentchooserdialog.set_default_size(400, -1)
+class RecentChooserDialog(Gtk.RecentChooserDialog):
+    def __init__(self):
+        Gtk.RecentChooserDialog.__init__(self)
+        self.set_title('RecentChooserDialog')
+        self.set_default_size(250, -1)
+        self.add_button('Cancel', Gtk.ResponseType.CANCEL)
+        self.add_button('OK', Gtk.ResponseType.OK)
+        self.set_default_response(Gtk.ResponseType.OK)
+        self.connect('response', self.on_response)
 
-response = recentchooserdialog.run()
+    def on_response(self, dialog, response):
+        if response == Gtk.ResponseType.OK:
+            item = recentchooserdialog.get_current_item()
 
-if response == Gtk.ResponseType.OK:
-    item = recentchooserdialog.get_current_item()
+            if item:
+                print('Item selected:')
+                print('Name:\t %s' % (item.get_display_name()))
+                print('URI:\t %s' % (item.get_uri()))
 
-    if item:
-        name = item.get_display_name()
-        uri = item.get_uri()
-
-        print("Item selected:")
-        print("Name:\t %s" % name)
-        print("URI:\t %s" % uri)
-
-recentchooserdialog.destroy()
+dialog = RecentChooserDialog()
+dialog.run()
+dialog.destroy()

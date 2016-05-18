@@ -2,30 +2,31 @@
 
 from gi.repository import Gtk
 
-def item_activated(recentchoosermenu):
-    item = recentchoosermenu.get_current_item()
+class RecentChooserMenu(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self)
+        self.set_title('RecentChooserMenu')
+        self.connect('destroy', Gtk.main_quit)
 
-    if item:
-        name = item.get_display_name()
-        uri = item.get_uri()
+        menubar = Gtk.MenuBar()
+        self.add(menubar)
 
-        print("Item selected:")
-        print("Name:\t %s" % name)
-        print("URI:\t %s" % uri)
+        menuitem = Gtk.MenuItem('Recent Items')
+        menubar.append(menuitem)
 
-window = Gtk.Window()
-window.connect("destroy", Gtk.main_quit)
+        recentchoosermenu = Gtk.RecentChooserMenu()
+        recentchoosermenu.connect('item-activated', self.on_item_activated)
+        menuitem.set_submenu(recentchoosermenu)
 
-menubar = Gtk.MenuBar()
-window.add(menubar)
+    def on_item_activated(self, recentchoosermenu):
+        item = recentchoosermenu.get_current_item()
 
-menuitem = Gtk.MenuItem(label="Recent Items")
-menubar.append(menuitem)
+        if item:
+            print("Item selected:")
+            print("Name:\t %s" % (item.get_display_name()))
+            print("URI:\t %s" % (item.get_uri()))
 
-recentchoosermenu = Gtk.RecentChooserMenu()
-recentchoosermenu.connect("item-activated", item_activated)
-menuitem.set_submenu(recentchoosermenu)
-
+window = RecentChooserMenu()
 window.show_all()
 
 Gtk.main()
