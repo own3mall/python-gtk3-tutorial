@@ -8,19 +8,19 @@ class RecentChooserWidget(Gtk.Window):
         self.set_title('RecentChooserWidget')
         self.set_default_size(300, 250)
         self.set_border_width(5)
-        self.connect("destroy", Gtk.main_quit)
+        self.connect('destroy', Gtk.main_quit)
 
         recentchooserwidget = Gtk.RecentChooserWidget()
-        recentchooserwidget.connect("item-activated", self.on_item_activated)
+        recentchooserwidget.connect('item-activated', self.on_item_activated)
         self.add(recentchooserwidget)
 
     def on_item_activated(self, recentchooserwidget):
         item = recentchooserwidget.get_current_item()
 
         if item:
-            print("Item selected:")
-            print("Name:\t %s" % (item.get_display_name()))
-            print("URI:\t %s" % (item.get_uri()))
+            print('Item selected:')
+            print('Name:\t %s' % (item.get_display_name()))
+            print('URI:\t %s' % (item.get_uri()))
 
 window = RecentChooserWidget()
 window.show_all()

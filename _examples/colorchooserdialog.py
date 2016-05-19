@@ -9,13 +9,11 @@ def color_activated():
     green = (color.green * 255)
     blue = (color.blue * 255)
 
-    print("Hex: #%02x%02x%02x" % (red, green, blue))
+    print('Hex: #%02x%02x%02x' % (red, green, blue))
 
 colorchooserdialog = Gtk.ColorChooserDialog()
 
-response = colorchooserdialog.run()
-
-if response == Gtk.ResponseType.OK:
+if colorchooserdialog.run() == Gtk.ResponseType.OK:
     color_activated()
 
 colorchooserdialog.destroy()

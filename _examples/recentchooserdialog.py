@@ -12,7 +12,7 @@ class RecentChooserDialog(Gtk.RecentChooserDialog):
         self.set_default_response(Gtk.ResponseType.OK)
         self.connect('response', self.on_response)
 
-    def on_response(self, dialog, response):
+    def on_response(self, recentchooserdialog, response):
         if response == Gtk.ResponseType.OK:
             item = recentchooserdialog.get_current_item()
 

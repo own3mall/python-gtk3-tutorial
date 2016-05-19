@@ -9,10 +9,10 @@ class PlacesSidebar(Gtk.Window):
         self.connect("destroy", Gtk.main_quit)
 
         placessidebar = Gtk.PlacesSidebar()
-        placessidebar.connect("open-location", self.on_open_link)
+        placessidebar.connect("open-location", self.on_open_location)
         self.add(placessidebar)
 
-    def on_open_link(self, placessidebar, location, flags):
+    def on_open_location(self, placessidebar, location, flags):
         location = placessidebar.get_location()
 
         print("Opened URI: %s" % (GLocalFile.get_uri(location)))
