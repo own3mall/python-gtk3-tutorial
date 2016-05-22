@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-from gi.repository import Gtk, Gdk
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+from gi.repository import Gdk
 
 class SearchBar(Gtk.Window):
     def __init__(self):

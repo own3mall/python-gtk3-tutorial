@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-from gi.repository import Gtk, GdkX11
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+from gi.repository import GdkX11
 import cairo
 
 def expose(drawingarea, context):

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 def tooltip_query(widget, x, y, keyboard_mode, tooltip):

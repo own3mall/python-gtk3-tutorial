@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-from gi.repository import Gtk, Pango
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+from gi.repository import Pango
 
 def set_wrap_mode(radiobutton, wrap_mode):
     textview.set_wrap_mode(wrap_mode)

@@ -1,38 +1,43 @@
 #!/usr/bin/env python3
 
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
+class Popover(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self)
+        self.set_title("Popover")
+        self.set_default_size(250, 250)
+        self.connect("destroy", Gtk.main_quit)
+        
+        box = Gtk.Box()
+        box.set_orientation(Gtk.Orientation.VERTICAL)
+        self.add(box)
 
-def button_clicked(button):
-    popover.show_all()
+        button = Gtk.Button("Popover Launcher")
+        button.connect("clicked", self.on_popover_clicked)
+        box.add(button)
 
-window = Gtk.Window()
-window.set_default_size(250, 250)
-window.connect("destroy", Gtk.main_quit)
+        self.popover = Gtk.Popover()
+        self.popover.set_position(Gtk.PositionType.RIGHT)
+        self.popover.set_relative_to(button)
 
-box = Gtk.Box()
-box.set_orientation(Gtk.Orientation.VERTICAL)
-window.add(box)
+        box = Gtk.Box()
+        box.set_spacing(5)
+        box.set_orientation(Gtk.Orientation.VERTICAL)
+        self.popover.add(box)
 
-button = Gtk.Button("Popover Launcher")
-button.connect("clicked", button_clicked)
-box.add(button)
+        label = Gtk.Label("A Label widget")
+        box.add(label)
 
-popover = Gtk.Popover()
-popover.set_position(Gtk.PositionType.RIGHT)
-popover.set_relative_to(button)
+        checkbutton = Gtk.CheckButton("A CheckButton widget")
+        box.add(checkbutton)
+        
+    def on_popover_clicked(self, button):
+        self.popover.show_all()
 
-box = Gtk.Box()
-box.set_spacing(5)
-box.set_orientation(Gtk.Orientation.VERTICAL)
-popover.add(box)
-
-label = Gtk.Label("A Label widget")
-box.add(label)
-
-checkbutton = Gtk.CheckButton("A CheckButton widget")
-box.add(checkbutton)
-
+window = Popover()
 window.show_all()
 
 Gtk.main()

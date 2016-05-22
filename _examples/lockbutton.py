@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
-from gi.repository import Gtk, GObject, Polkit, Gio
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+from gi.repository import GObject
+from gi.repository import Polkit
+from gi.repository import Gio
 import os
 
 def check_authorization(lockbutton):
