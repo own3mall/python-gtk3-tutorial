@@ -16,6 +16,14 @@ The FileChooserWidget can be constructed using the following::
 The *action* parameter dictates what the FileChooserWidget can do. It should be set to one of ``Gtk.FileChooserAction.OPEN`` which allows opening of files, ``Gtk.FileChooserAction.SAVE`` which allows files to be saved, ``Gtk.FileChooserAction.SELECT_FOLDER`` which enables selecting of folders and ``Gtk.FileChooserAction.CREATE_FOLDER`` which creates folders based on a specified name.
 
 =======
+Methods
+=======
+
+.. note::
+
+  The FileChooserWidget inherits methods from the :doc:`filechooser` object.
+
+=======
 Example
 =======
 Below is an example of a FileChooserWidget:

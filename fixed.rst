@@ -2,7 +2,7 @@ Fixed
 =====
 A Fixed container provides a surface which allows the positioning of child widgets at fixed co-ordinates.
 
-Fixed is very similar to the :doc`layout` container, however it doesn't provide an infinite scrolling area. It should be used when the size of the Fixed area will be known.
+Fixed is very similar to the :doc:`layout` container, however it does not provide an infinite scrolling area. It should be used when the size of the Fixed area will be known.
 
 ===========
 Constructor

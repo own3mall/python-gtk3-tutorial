@@ -14,6 +14,14 @@ The FontChooserWidget can be constructed using the following::
   fontchooserwidget = Gtk.FontChooserWidget()
 
 =======
+Methods
+=======
+
+.. note ::
+
+  The FontChooserWidget inherits methods from the :doc:`fontchooser` object.
+
+=======
 Example
 =======
 Below is an example of a FontChooserWidget:

@@ -29,6 +29,10 @@ The title of the dialog which is displayed can be set with::
 
   fontchooserdialog.set_title(title)
 
+.. note::
+
+  The FontChooserWidget inherits methods from the :doc:`fontchooser` object.
+
 =======
 Example
 =======

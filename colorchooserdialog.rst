@@ -12,9 +12,22 @@ The ColorChooserDialog is constructed using::
 =======
 Methods
 =======
+Once the ColorChooserDialog has been constructed use::
+
+  colorchooserdialog.run()
+  colorchooserdialog.destroy()
+
+.. note::
+
+  If you application only uses a dialog window, the ``Gtk.main()`` call is not required. This is invoked automatically when calling ``colorchooserdialog.run()``.
+
 A title should be set on the ColorChooserDialog indicating the function of the dialog::
 
   colorchooserdialog.set_title(title)
+
+.. note::
+
+  The ColorChooserDialog inherits methods from the :doc:`colorchooser` object.
 
 ========
 Examples

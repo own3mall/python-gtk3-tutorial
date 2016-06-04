@@ -13,7 +13,12 @@ The default action of the FileChooser is to provide functionality to open files.
 
   filechooser.set_action(action)
 
-The *action* value can be set to one of the following; ``Gtk.FileChooserAction.OPEN``, ``Gtk.FileChooserAction.SAVE``, ``Gtk.FileChooserAction.SELECT_FOLDER``, or ``Gtk.FileChooserAction.CREATE_FOLDER``.
+The *action* value should be set to one of the following:
+
+* ``Gtk.FileChooserAction.OPEN`` - FileChooser will be used to open a file.
+* ``Gtk.FileChooserAction.SAVE`` - FileChooser will be used to save a file.
+* ``Gtk.FileChooserAction.SELECT_FOLDER`` - FileChooser will be used to select a folder.
+* ``Gtk.FileChooserAction.CREATE_FOLDER`` - FileChooser will be used to create a folder.
 
 By default, the FileChooser allows selection of a single file only. This can be configured with::
 
@@ -23,27 +28,41 @@ The *select_multiple* can be set to ``True`` which allows the user to hold down 
 
 Retreival of the selected filename or uniform resource identifier (URI) is done via::
 
-  filename = widget.get_filename()
-  uri = widget.get_uri()
+  filechooser.get_filename()
+  filechooser.get_uri()
 
 Alternatively, if you have provided the ability for multiple files to be selected, you must use::
 
-  filenames = widget.get_filenames()
-  uris = widget.get_uris()
+  filechooser.get_filenames()
+  filechooser.get_uris()
 
-Another useful function, particular when saving files is to predefine a filename for the file, for example "Unsaved Document".
+Another useful function, particular when saving files is to predefine a filename or uri for the file, for example "Unsaved Document".
 
-  filename.set_filanme(filename)
+  filechooser.set_filname(filename)
+  filechooser.set_uri(uri)
 
 To configure whether the button to create new folders is visible, call::
 
-  widget.set_create_folders(create_folders)
+  filechooser.set_create_folders(create_folders)
 
 The *create_folders* option should be set to ``False`` if the button is to be hidden.
 
 .. note:
 
   The ``.set_create_folders()`` option does not apply when the action ``Gtk.FileChooserAction.OPEN parameter is used.
+
+In some cases, the FileChooser should only open local files. This is settable with::
+
+  filechooser.set_local_only(local_only)
+
+A :doc:`filefilter` is able to be added to or removed from the FileChooser by specifying::
+
+  filechooser.add_filter(filefilter)
+  filechooser.remove_filter(filefilter)
+
+The list of FileFilter objects associated with the FileChooser can be obtained through::
+
+  filechooser.list_filters()
 
 =======
 Signals

@@ -16,6 +16,10 @@ The title of the dialog which appears when clicking on the ColorButton can be se
 
   colorbutton.set_title(title)
 
+.. note::
+
+  The ColorButton inherits methods from the :doc:`colorchooser` object.
+
 ========
 Examples
 ========

@@ -18,6 +18,10 @@ To specify a title on the dialog that appears, use the method::
 
   filechooserbutton.set_title(title)
 
+.. note::
+
+  The FileChooserButton inherits methods from the :doc:`filechooser` object.
+
 =======
 Signals
 =======

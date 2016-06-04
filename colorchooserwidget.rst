@@ -13,6 +13,14 @@ The ColorChooserWidget is constructed using::
 
   colorchooserwidget = Gtk.ColorChooserWidget()
 
+=======
+Methods
+=======
+
+.. note::
+
+  The ColorChooserWidget inherits methods from the :doc:`colorchooser` object.
+
 ========
 Examples
 ========

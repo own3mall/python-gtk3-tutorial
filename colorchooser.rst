@@ -30,7 +30,7 @@ Signals
 =======
 The common signals of the ColorChooser are::
 
-  "color-activated" (chooser, color)
+  "color-activated" (colorchooser, color)
 
 The *color* value is returned when the user activates the colour in the chooser, emitting the ``"color-activated"`` signal.
 

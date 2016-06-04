@@ -18,6 +18,10 @@ The title of the dialog which is displayed can be set with::
 
   fontbutton.set_title(title)
 
+.. note::
+
+  The FontButton inherits methods from the :doc:`fontchooser` object.
+
 =======
 Signals
 =======

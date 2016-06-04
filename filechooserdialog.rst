@@ -35,6 +35,10 @@ When using a FileChooserDialog, the parent window should be defined. This ensure
 
 Generally, the *parent* parameter will be a :doc:`window` or some other dialog type.
 
+.. note::
+
+  The FileChooserDialog inherits methods from the :doc:`filechooser` object.
+
 =======
 Example
 =======

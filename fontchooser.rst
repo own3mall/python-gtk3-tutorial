@@ -29,13 +29,13 @@ It is also possible to set the font using a description::
 
   fontchooser.set_font_desc(font_desc)
 
-.. note:
+.. note::
 
   When using ``.set_font_desc()``, the font description entered may change. For example, if you enter "Bold Droid Sans", the FontChooser may change this to "Droid Sans Bold 12".
 
-ColorChooser objects also support setting a font::
+The FontChooser objects also support setting a font::
 
-  fontchooser.set_font(fontname)
+  fontchooser.set_font(font)
 
 A preview entry can be used to allow the user to test the font selected. This can be enabled or disabled via::
 
@@ -49,7 +49,7 @@ The preview text is the string which showcases the font, size, and other attribu
 
 If required, the preview text can also be returned::
 
-  preview_text = fontchooser.get_preview_text()
+  fontchooser.get_preview_text()
 
 =======
 Signals
