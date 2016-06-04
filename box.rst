@@ -43,12 +43,6 @@ The orientation of the Box can be changed after construction by::
 
 Again, the *orientation* value must be set to either ``Gtk.Orientation.HORIZONTAL`` or ``Gtk.Orientation.VERTICAL``.
 
-Child widgets can be reordered within the Box using::
-
-  box.reorder_child(child, position)
-
-The *child* value should be the name of the widget which is to be moved. The *position* value should be an integer value which designates the new position of the child. ``0`` designates the first position in the box.
-
 To ensure that all child widgets are set to an equal size regardless of their content, use::
 
   box.set_homogeneous(homogeneous)
@@ -58,6 +52,37 @@ By default, *homogeneous* is set to ``False`` and all child widgets are sized ba
 The Box spacing can be set after construction with::
 
   box.set_spacing(spacing)
+
+The *spacing* parameter takes an integer value for the pixel width or height between each item.
+
+Information about how a child is packed into the Box can be obtained via::
+
+  box.query_child_packing(child)
+
+A *child* must be supplied. The function returns a tuple with the packing information (expand, fill, padding, pack type).
+
+If required, the packing values of an already added child can be configured by the method::
+
+  box.set_child_packing(child, expand, fill, padding, pack_type)
+
+The *expand*, *fill*, and *padding* parameters should be of the same type as the ``.pack_start()`` and ``.pack_end()`` methods. The *pack_type* should be set to one of:
+
+* ``Gtk.PackType.START`` - pack at the left or top of the Box.
+* ``Gtk.PackType.END`` - pack at the right or bottom of the Box.
+
+A baseline position for the widgets added to the Box can be set with::
+
+  box.set_baseline_position(position)
+
+The *position* should be set to one of:
+
+* ``Gtk.BaselinePosition.TOP`` - align to left or top of Box.
+* ``Gtk.BaselinePosition.CENTER`` - alight to center of Box.
+* ``Gtk.BaselinePosition.BOTTOM`` - align to right or bottom of Box.
+
+A center widget can be set which is also positioned centrally regardless of other widgets via::
+
+  box.set_center_widget(widget)
 
 =======
 Example
