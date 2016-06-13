@@ -10,6 +10,7 @@ def expose(drawingarea, context):
     pass
 
 window = Gtk.Window()
+window.set_title("DrawingArea")
 window.set_default_size(600, 400)
 window.connect("destroy", Gtk.main_quit)
 

@@ -14,6 +14,7 @@ def event_release(eventbox, event):
     print("Button Release Event: %s" % event)
 
 window = Gtk.Window()
+window.set_title("EventBox")
 window.set_default_size(200, 200)
 window.connect("destroy", Gtk.main_quit)
 

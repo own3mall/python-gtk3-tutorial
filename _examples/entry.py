@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class Entry(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("Entry")
         self.connect("destroy", Gtk.main_quit)
 
         entry = Gtk.Entry()

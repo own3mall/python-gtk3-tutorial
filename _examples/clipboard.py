@@ -8,6 +8,7 @@ from gi.repository import Gdk
 class Clipboard(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("Clipboard")
         self.connect("destroy", Gtk.main_quit)
 
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)

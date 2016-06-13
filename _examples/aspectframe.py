@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class AspectFrame(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("AspectFrame")
         self.set_default_size(200, 200)
         self.set_border_width(5)
         self.connect("destroy", Gtk.main_quit)

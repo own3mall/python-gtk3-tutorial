@@ -10,6 +10,7 @@ distributions = ["fedora", "mandriva", "zenwalk", "knoppix", "debian"]
 class IconView(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("IconView")
         self.connect("destroy", Gtk.main_quit)
 
         self.liststore = Gtk.ListStore(str, GdkPixbuf.Pixbuf, str)

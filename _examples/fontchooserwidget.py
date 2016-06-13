@@ -8,6 +8,7 @@ def font_chooser(fontchooserwidget, font):
     print("Font selected: %s" % font)
 
 window = Gtk.Window()
+window.set_title("FontChooserWidget")
 window.connect("destroy", Gtk.main_quit)
 
 fontchooserwidget = Gtk.FontChooserWidget()

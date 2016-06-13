@@ -8,6 +8,7 @@ def font_changed(fontbutton):
     print("Font selected: %s" % fontbutton.get_font_name())
 
 window = Gtk.Window()
+window.set_title("FontButton")
 window.set_default_size(150, -1)
 window.connect("destroy", Gtk.main_quit)
 

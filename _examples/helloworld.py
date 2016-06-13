@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class HelloWorld(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("Hello World")
         self.connect("destroy", Gtk.main_quit)
 
         button = Gtk.Button("Click Here")

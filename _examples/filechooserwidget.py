@@ -9,6 +9,7 @@ def file_selected(button):
     Gtk.main_quit()
 
 window = Gtk.Window()
+window.set_title("FileChooserWidget")
 window.set_default_size(600, 400)
 window.connect("destroy", Gtk.main_quit)
 

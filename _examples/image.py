@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class Image(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("Image")
         self.connect("destroy", Gtk.main_quit)
 
         image = Gtk.Image()

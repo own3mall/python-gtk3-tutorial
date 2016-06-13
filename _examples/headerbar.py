@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class HeaderBar(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("HeaderBar")
         self.set_default_size(-1, 200)
         self.connect("destroy", Gtk.main_quit)
 

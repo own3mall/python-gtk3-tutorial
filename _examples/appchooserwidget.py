@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class AppChooserWidget(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("AppChooserWidget")
         self.connect("destroy", Gtk.main_quit)
 
         appchooserwidget = Gtk.AppChooserWidget(content_type="video/webm")

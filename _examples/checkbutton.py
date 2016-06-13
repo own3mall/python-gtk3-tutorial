@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class CheckButton(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("CheckButton")
         self.connect("destroy", Gtk.main_quit)
 
         checkbutton = Gtk.CheckButton(label="CheckButton")

@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class EntryBuffer(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("EntryBuffer")
         self.connect("destroy", Gtk.main_quit)
 
         box = Gtk.Box()

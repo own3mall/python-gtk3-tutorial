@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class FileFilter(Gtk.FileChooserDialog):
     def __init__(self):
         Gtk.FileChooserDialog.__init__(self)
+        self.set_title("FileFilter")
         self.add_button("_Cancel", Gtk.ResponseType.CLOSE)
         self.add_button("_Open", Gtk.ResponseType.OK)
         self.connect("response", self.on_response)

@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class ButtonBox(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("ButtonBox")
         self.connect("destroy", Gtk.main_quit)
 
         buttonbox = Gtk.ButtonBox()

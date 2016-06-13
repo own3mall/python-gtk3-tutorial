@@ -8,6 +8,7 @@ from gi.repository import GdkPixbuf
 class CellRendererPixbuf(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("CellRendererPixbuf")
         self.connect("destroy", Gtk.main_quit)
 
         liststore = Gtk.ListStore(str, GdkPixbuf.Pixbuf)

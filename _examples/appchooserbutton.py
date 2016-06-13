@@ -7,6 +7,7 @@ from gi.repository import Gtk
 class AppChooserButton(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self)
+        self.set_title("AppChooserButton")
         self.set_default_size(200, -1)
         self.connect("destroy", Gtk.main_quit)
 
