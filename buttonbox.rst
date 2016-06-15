@@ -14,13 +14,19 @@ The *orientation* argument should be set to either ``Gtk.Orientation.HORIZONTAL`
 =======
 Methods
 =======
-Button widgets can be added to the ButtonBox using::
+Button widgets (or other widgets if required) can be added to the ButtonBox using::
 
-  buttonbox.add(button)
+  buttonbox.add(child)
 
 They can also be removed if needed by calling::
 
-  buttonbox.remove(button)
+  buttonbox.remove(child)
+
+A child can be reordered within the ButtonBox via the method::
+
+  buttonbox.reorder_child(child, position)
+
+The *child* specified the child widget to be moved, with the *position* value set as an integer for the new position within the ButtonBox.
 
 ButtonBox supports a number of layouts to customise the appearance of your application. This is done by using::
 

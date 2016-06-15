@@ -30,9 +30,12 @@ The structure of widgets and objects in GTK+ is shown below::
   +---------------GtkPageSetupUnixDialog
   +---------------GtkPrintUnixDialog
   +---------------GtkRecentChooserDialog
+  +------------GtkApplicationWindow
   +------------GtkAssistant
   +------------GtkOffscreenWindow
   +------------GtkPlug
+  +------------GtkShortcutsWindow
+  +---------GtkActionBar
   +---------GtkAlignment
   +---------GtkComboBox
   +------------GtkAppChooserButton
@@ -43,27 +46,59 @@ The structure of widgets and objects in GTK+ is shown below::
   +------------GtkToggleButton
   +---------------GtkCheckButton
   +------------------GtkRadioButton
+  +---------------GtkMenuButton
   +------------GtkColorButton
   +------------GtkFontButton
   +------------GtkLinkButton
   +------------GtkLockButton
+  +------------GtkModelButton
   +------------GtkScaleButton
   +---------------GtkVolumeButton
   +---------GtkMenuItem
+  +------------GtkCheckMenuItem
+  +---------------GtkRadioMenuItem
+  +------------GtkSeparatorMenuItem
   +---------GtkEventBox
   +---------GtkExpander
+  +---------GtkFlowBoxChild
   +---------GtkHandleBox
+  +---------GtkListBoxRow
   +---------GtkToolItem
+  +------------GtkToolButton
+  +---------------GtkMenuToolButton
+  +---------------GtkToggleToolButton
+  +------------------GtkRadioToolButton
   +---------GtkOverlay
   +---------GtkScrolledWindow
+  +------------GtkPlacesSidebar
+  +---------GtkPopover
+  +------------GtkPopoverMenu
+  +---------GtkRevealer
+  +---------GtkSearchBar
+  +---------GtkSearchSidebar
   +---------GtkViewport
   +------GtkBox
+  +---------GtkAppChooserWidget
+  +---------GtkButtonBox
+  +---------GtkColorChooserWidget
+  +---------GtkFileChooserButton
+  +---------GtkFileChooserWidget
+  +---------GtkFontChooserWidget
+  +---------GtkInfoBar
+  +---------GtkRecentChooserWidget
+  +---------GtkShortcutsSelection
+  +---------GtkShortcutsGroup
+  +---------GtkShortcutsShortcut
+  +---------GtkStackSwitcher
   +------GtkFixed
   +------GtkGrid
   +------GtkPaned
   +------GtkIconView
   +------GtkLayout
   +------GtkMenuShell
+  +---------GtkMenuBar
+  +---------GtkMenu
+  +------------GtkRecentChooserMenu
   +------GtkNotebook
   +------GtkSocket
   +------GtkTable
@@ -72,4 +107,22 @@ The structure of widgets and objects in GTK+ is shown below::
   +------GtkToolItemGroup
   +------GtkToolPalette
   +------GtkTreeView
+  +---GtkMisc
+  +------GtkLabel
+  +---------GtkAccelLabel
+  +------GtkImage
+  +---GtkCalendar
+  +---GtkDrawingArea
+  +---GtkEntry
+  +------GtkSearchEntry
+  +------GtkSpinButton
+  +---GtkRange
+  +------GtkScale
+  +------GtkScrollbar
+  +---GtkSeparator
+  +---GtkInvisible
+  +---GtkProgressBar
+  +---GtkSpinner
+  +---GtkSwitch
+  +---GtkLevelbar
 

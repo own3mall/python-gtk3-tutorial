@@ -21,7 +21,7 @@ After construction, there are a number of methods which can be used to display d
 The pixel size of the Image object can be set and retrieved with the methods::
 
   image.set_pixel_size(size)
-  size = image.get_pixel_size()
+  image.get_pixel_size()
 
 To clear the graphic from the Image::
 
@@ -29,7 +29,7 @@ To clear the graphic from the Image::
 
 Retrieval of the type of image currently held in the Image object can be done with::
 
-  storage_type = image.get_storage_type()
+  image.get_storage_type()
 
 =======
 Example

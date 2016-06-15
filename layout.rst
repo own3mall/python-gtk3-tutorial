@@ -32,7 +32,7 @@ To set the size of the Layout call::
 
 Alternatively, to retrieve the Layout size use::
 
-  size = layout.get_size()
+  layout.get_size()
 
 The Adjustment objects can be specified after constructing the Layout with::
 

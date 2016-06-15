@@ -38,6 +38,11 @@ To set the AspectFrame properties relating to the child size after construction 
 
   aspectframe.set(xalign, yalign, ratio, obey_child)
 
+Children are able to be added to and removed from the AspectFrame using both::
+
+  aspectframe.add(child)
+  aspectframe.remove(child)
+
 =======
 Example
 =======

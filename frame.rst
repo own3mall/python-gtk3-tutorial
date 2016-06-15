@@ -28,6 +28,11 @@ By default, the label is positioned in the top-left corner of the Frame. This ca
 
 The *xalign* and *yalign* values should be float values between ``0.0`` and ``1.0``. By default, these values are set to 0.0 and 0.5 on a newly created Frame.
 
+Children are able to be added to and removed from the Frame using both::
+
+  frame.add(child)
+  frame.remove(child)
+
 =======
 Example
 =======

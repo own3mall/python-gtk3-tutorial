@@ -14,11 +14,11 @@ Methods
 =======
 There are three options for adding pages to a Notebook. These are as follows::
 
-  notebook.append_page(child, tab_label)
-  notebook.prepend_page(child, tab_label)
-  notebook.insert_page(child, tab_label, position)
+  notebook.append_page(child, label)
+  notebook.prepend_page(child, label)
+  notebook.insert_page(child, label, position)
 
-The ``.append_page()`` method adds pages to the end of the Notebook whereas ``.prepend_page()`` adds to the beginning. Calling ``.insert_page()`` adds pages to a particular location identified by *position*. The *child* parameter is the name of the widget which will be added to the Notebook page (commonly a Grid or Box). The *tab_label* specifies the Label widget which holds the title text of the page.
+The ``.append_page()`` method adds pages to the end of the Notebook whereas ``.prepend_page()`` adds to the beginning. Calling ``.insert_page()`` adds pages to a particular location identified by *position*. The *child* parameter is the name of the widget which will be added to the Notebook page (commonly a Grid or Box). The *label* parameter specifies the :doc:`label` widget which holds the title text of the page.
 
 Pages can also be removed by specifying the position by calling::
 
@@ -28,15 +28,15 @@ The *position* value is a number identifying the current position of the tab to 
 
 To retrieve the number of pages which the Notebook holds::
 
-  n_pages = notebook.get_n_pages()
+  notebook.get_n_pages()
 
 Retrieval of the child contained at a particular page number can be retrieved with::
 
-  nth_page = notebook.get_nth_page()
+  notebook.get_nth_page()
 
-To return the page number of the currently selected page call::
+To return the page number of the currently visible page call the method::
 
-  position = notebook.get_current_page()
+  notebook.get_current_page()
 
 Setting the currently active page on the Notebook can be achieved with::
 

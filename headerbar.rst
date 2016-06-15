@@ -18,7 +18,7 @@ To set the title on the HeaderBar use::
 
 The title can also be retrieved with::
 
-  title = headerbar.get_title()
+  headerbar.get_title()
 
 HeaderBar widgets also support subtitles and would be used to provide information to the user about the current view.
 

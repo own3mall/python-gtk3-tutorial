@@ -42,7 +42,7 @@ To set the Expander to open programatically the following can be called::
 
   expander.set_expanded(expanded)
 
-When set to ``True``, the Expander will be opened and the child content will be displayed.
+When *expanded* is set to ``True``, the Expander will be opened and the child content will be displayed.
 
 Expanding the Expander widget will cause the parent widget (i.e. Window, Dialog) to expand to make room for the content within the Expander. The default action when closing the Expander is to leave the Window at the largest size, rather than shrink to the original. To change this behaviour use::
 
