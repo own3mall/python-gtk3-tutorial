@@ -101,6 +101,7 @@ Contents:
    appchooserdialog
    appchooserbutton
    recentmanager
+   recentinfo
    recentchooser
    recentchooserwidget
    recentchooserdialog
