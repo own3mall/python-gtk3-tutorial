@@ -27,9 +27,17 @@ Submenus can be attached to a MenuItem via::
 
 The *menu* value should be a named :doc:`menu` widget. This should be used for both menus attached to items on a Menubar, and when constructing a tree of menus.
 
+An attached submenu is retrieved using::
+
+  menuitem.get_submenu()
+
 A MenuItem can be programatically activated with the method::
 
   menuitem.activate()
+
+Space can be reserved for an indicator (such as those displayed when a submenu is available) regardless of whether one is currently added to a MenuItem. This is set via::
+
+  menuitem.set_reserve_indicator(reserve)
 
 =======
 Signals

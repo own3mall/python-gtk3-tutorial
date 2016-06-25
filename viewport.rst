@@ -16,8 +16,8 @@ Methods
 =======
 Rather than create Adjustment objects manually, these can be retrieved from the Viewport with::
 
-  hadjustment = viewport.get_hadjustment()
-  vadjustment = viewport.get_vadjustment()
+  viewport.get_hadjustment()
+  viewport.get_vadjustment()
 
 If you do use manually created Adjustment objects, these can be attached after construction by calling::
 
@@ -35,6 +35,13 @@ The *shadow* should be set to one of the following:
 * ``Gtk.ShadowType.OUT`` - outline bevelled outwards.
 * ``Gtk.ShadowType.ETCHED_IN`` - outline sunken.
 * ``Gtk.ShadowType.ERCHED_OUT`` - outline raised.
+
+The window objects which are created with the Viewport can be obtained via the methods::
+
+  viewport.get_bin_window()
+  viewport.get_view_window()
+
+The ``.get_bin_window()`` method returns the window of the entire Viewport. The ``.get_view_window()`` method returns the window holding the content of the Viewport.
 
 =======
 Example

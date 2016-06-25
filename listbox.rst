@@ -24,9 +24,15 @@ The selection mode of the child widgets in the ListBox can be configured::
 
 The *selection_mode* parameter can be set to one of the following:
 
-* ``Gtk.Selection.NONE``
-* ``Gtk.Selection.SINGLE``
-* ``Gtk.Selection.BROWSE``
+* ``Gtk.Selection.NONE`` - disallow selection of rows.
+* ``Gtk.Selection.SINGLE`` - allow a single row to be selected.
+* ``Gtk.Selection.BROWSE`` - allow none, one or multiple rows to be selected.
+
+A list of rows currently selected in the ListBox is obtained with::
+
+  listbox.get_selected_rows()
+
+The ``.get_selected_rows()`` method will return a list of :doc:`listboxrow` objects for each selected row.
 
 When there are no child widgets to display in the ListBox, a placeholder can be set instead. This could be a :doc:`label` or :doc:`image` for example.
 

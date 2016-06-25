@@ -34,9 +34,9 @@ An :doc:`accelgroup` can be attached to the Menu using::
 
 Enabling the Menu to reserve space for menu items as it would for toggles or icons, this can be enabled via::
 
-  menu.set_reserve_toggle_size(reserve_toggle)
+  menu.set_reserve_toggle_size(reserve)
 
-When the *reserve_toggle* value is set to ``True``, the text will be indented within the menu regardless of whether there are any icons or toggles.
+When the *reserve* value is set to ``True``, the text will be indented within the menu regardless of whether there are any icons or toggle indicators.
 
 =======
 Example

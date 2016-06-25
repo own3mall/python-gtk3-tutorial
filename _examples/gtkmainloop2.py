@@ -5,12 +5,6 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 class HelloWorld:
-    def close_hello_world(self, widget):
-        Gtk.main_quit()
-
-    def print_hello_world(self, widget):
-        print("Hello World")
-
     def __init__(self):
         window = Gtk.Window()
         window.connect("destroy", self.close_hello_world)
@@ -20,6 +14,12 @@ class HelloWorld:
         window.add(button)
 
         window.show_all()
+
+    def close_hello_world(self, widget):
+        Gtk.main_quit()
+
+    def print_hello_world(self, widget):
+        print("Hello World")
 
 if __name__ == "__main__":
     HelloWorld()

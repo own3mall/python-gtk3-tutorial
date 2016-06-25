@@ -133,7 +133,9 @@ Contents:
    treemodelfilter
    iconview
    listbox
+   listboxrow
    flowbox
+   flowboxchild
    dialog
    messagedialog
    aboutdialog

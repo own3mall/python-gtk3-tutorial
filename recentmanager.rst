@@ -20,14 +20,28 @@ They can also be removed based on the URI as well by using::
 
   recentmanager.remove_item(uri)
 
+Every item can be purged from the RecentManager with::
+
+  recentmanager.purge_items()
+
 Recent items can be retrieved from the RecentManager by calling::
 
-  items = recentmanager.get_items()
+  recentmanager.get_items()
 
 This method returns a list of all the URIs within the RecentManager.
 
+A :doc:`recentinfo` object can be obtained by looking up a URI via the method::
+
+  recentmanager.lookup_item(uri)
+
 To check whether the RecentManager contains a specific URI use::
 
-  item = recentmanager.has_item()
+  recentmanager.has_item(uri)
 
-If the specified URI was found, ``True`` is returned.
+If the specified *uri* paramter was found, ``True`` is returned.
+
+Items held by the RecentManager can be moved if required::
+
+  recentmanager.move_item(old, new, error)
+
+The *old* and *new* parameters specify the URI strings. An *error* can also be specified which returns a GError object, or ``None`` if not required.
