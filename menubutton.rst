@@ -12,6 +12,18 @@ The MenuButton can be constructed using the following::
 =======
 Methods
 =======
+Text labels are set onto the MenuButton with the method::
+
+  menubutton.set_label(label)
+
+The label text in most cases will also have a mnemonic shortcut for keyboard accessibility which is defined by using an underscore prior to the character to be used for the shortcut. This feature is enabled with::
+
+  menubutton.set_use_underline(use_underline)
+
+.. note:
+
+  Mnemonic shortcuts are highly useful as an accessibility feature and should be used wherever possible. They are particularly important to people with disabilities as they provide quick access to common functions. To access the function using the mnemonic, hold down :kbd:`Alt` and the appropriate character.
+
 A MenuButton can have a :doc:`menu` added to it::
 
   menubutton.set_popup(menu)

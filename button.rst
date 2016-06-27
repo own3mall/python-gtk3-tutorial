@@ -24,13 +24,13 @@ Images can also be set on Button widgets with::
 
 By default, all Button widgets have a border around them. This can be configured using::
 
-  button.set_relief(relief_style)
+  button.set_relief(relief)
 
-The *relief_style* parameter can be set as follows, with the default being ``Gtk.BorderRelief.NORMAL``. The alternatives are ``Gtk.ReliefStyle.HALF`` or ``Gtk.ReliefStyle.NONE``.
+The *relief* parameter can be set as follows, with the default being ``Gtk.BorderRelief.NORMAL``. The alternatives are ``Gtk.ReliefStyle.HALF`` which shows no border when the mouse is not hovering over the widget, or ``Gtk.ReliefStyle.NONE`` in which no border is shown at all.
 
 It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function.
 
-  button.set_use_underline(True)
+  button.set_use_underline(use_underline)
 
 .. note:
 

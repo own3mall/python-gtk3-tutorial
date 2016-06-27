@@ -22,7 +22,7 @@ The label on the CheckButton is definable after construction via::
 
 It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function.
 
-  checkbutton.set_use_underline(True)
+  checkbutton.set_use_underline(use_underline)
 
 .. note:
 
