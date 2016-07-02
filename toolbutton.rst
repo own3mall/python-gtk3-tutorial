@@ -49,15 +49,15 @@ When *is_important* is set to ``True``, the icon text will be displayed.
 
 In some use cases, it may be useful to have an item set to invisible if the Toolbar is configured to either horizontal or vertical mode::
 
-  toolbutton.set_visible_horizontal(visible_horizontal)
-  toolbutton.set_visible_vertical(visible_vertical)
+  toolbutton.set_visible_horizontal(visible)
+  toolbutton.set_visible_vertical(visible)
 
 By default, all items are shown whether vertical or horizontal. Setting either method to ``False`` will result in the item being hidden.
 
 It is highly recommended to set a :doc:`tooltip` on the ToolButton using::
 
-  toolbutton.set_tooltip_text(tooltip_text)
-  toolbutton.set_tooltip_markup(tooltip_markup)
+  toolbutton.set_tooltip_text(text)
+  toolbutton.set_tooltip_markup(markup)
 
 =======
 Signals
@@ -71,4 +71,4 @@ The ``"clicked"`` signal emits from the ToolButton when the user presses and the
 =======
 Example
 =======
-To view an example for this widget, see the :doc:`toolbar` example.
+To view an example for this widget, see the Toolbar example.
