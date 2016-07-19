@@ -9,11 +9,15 @@ The Entry can be constructed using::
 
   entry = Gtk.Entry(entrybuffer)
 
-The *entrybuffer* parameter should be set to an :doc:`/entrybuffer` if required. In most cases, it won't be needed and can be omitted.
+The *entrybuffer* parameter should be set to an :doc:`entrybuffer` if required. In most cases, it won't be needed and can be omitted.
 
 =======
 Methods
 =======
+The entered text can be retrieved from the Entry with the method::
+
+  entry.get_text()
+
 Text can be inserted into the Entry using::
 
   entry.set_text(text)

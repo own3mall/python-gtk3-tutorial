@@ -12,6 +12,14 @@ The ToolPalette can be constructed using the following::
 =======
 Methods
 =======
+The ToolPalette is the container for :doc:`toolitemgroup` sub-containers, which actually hold the items. These are added to the ToolPalette by::
+
+  toolpalette.add(toolitemgroup)
+
+A ToolItemGroup may also be removed by calling::
+
+  toolpalette.remove(toolitemgroup)
+
 In some cases, it may be required to only display one of the ToolItemGroup objects at any one time with::
 
   toolpalette.set_exclusive(toolitemgroup, exclusive)

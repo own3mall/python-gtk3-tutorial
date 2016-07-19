@@ -5,7 +5,7 @@ The CellRenderer object provides a base for the other members of the CellRendere
 =======
 Methods
 =======
-The visibility of a particular can be toggled with::
+The visibility of a particular cell can be toggled with::
 
   cellrenderer.set_visible(visible)
 

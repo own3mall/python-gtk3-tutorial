@@ -18,7 +18,7 @@ The text can be retrieved from the SearchEntry::
 
 Text can also be added to the SearchEntry with the method::
 
-  searchentry.set_text()
+  searchentry.set_text(text)
 
 Placeholder text can be added to the SearchEntry to describe the function of the widget::
 
