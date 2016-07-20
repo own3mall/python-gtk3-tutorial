@@ -22,7 +22,7 @@ The *fraction* parameter should be a value between ``0.0`` and ``1.0``, with the
 
 Alternatively, the amount completed can be retrieved using::
 
-  fraction = progressbar.get_fraction()
+  progressbar.get_fraction()
 
 The value returned to the *fraction* variable will be a value between ``0.0`` and ``1.0``.
 

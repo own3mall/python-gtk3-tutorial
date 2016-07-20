@@ -22,7 +22,7 @@ To set the name which identifies the RecentFilter use::
 
 The name of the RecentFilter can also be retrieved with::
 
-  name = recentfilter.get_name()
+  recentfilter.get_name()
 
 Filtering by the file extension, or a particular portion of the filename can be done using::
 

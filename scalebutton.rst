@@ -16,7 +16,7 @@ Methods
 =======
 To retrieve the value from the ScaleButton run::
 
-  value = scalebutton.get_value()
+  scalebutton.get_value()
 
 Alternatively, to set the value use::
 

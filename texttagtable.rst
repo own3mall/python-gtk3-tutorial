@@ -6,7 +6,7 @@ A TextTagTable is an invisible object which is used to hold :doc:`texttag` objec
 Constructor
 ===========
 The TextTagTable can be constructed using::
-  
+
   texttagtable = Gtk.TextTagTable()
 
 =======
@@ -23,7 +23,7 @@ To find a TexTag within the table, use the method::
 
 Returning the number of TextTag objects contained within the table can be done with::
 
-  size = texttagtable.get_size()
+  texttagtable.get_size()
 
 =======
 Signals

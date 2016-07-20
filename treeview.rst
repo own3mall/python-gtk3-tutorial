@@ -32,7 +32,7 @@ A column can also be removed if necessary with::
 
 To fetch the number of columns within the TreeView::
 
-  n_columns = treeview.get_n_columns()
+  treeview.get_n_columns()
 
 By default, the column headers will be visible. These can be disabled with::
 

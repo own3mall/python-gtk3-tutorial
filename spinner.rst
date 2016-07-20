@@ -22,7 +22,7 @@ Properties
 ==========
 To check whether the Spinner is active, the property call is::
 
-  active = spinner.get_property("active")
+  spinner.get_property("active")
 
 If the Spinner is running, ``True`` is returned.
 

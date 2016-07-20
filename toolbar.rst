@@ -24,11 +24,11 @@ Items can also be removed using::
 
 To retrieve the number of items which are currently displayed on the Toolbar run::
 
-  n_items = toolbar.get_n_items()
+  toolbar.get_n_items()
 
 Alternatively, retrieving the widget at a specified position use::
 
-  child = toolbar.get_nth_item()
+  toolbar.get_nth_item()
 
 By default, the Toolbar style is specified in the GTK+ global setting. This can be configured with::
 

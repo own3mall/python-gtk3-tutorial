@@ -36,7 +36,7 @@ The *position* value should be an integer in pixels which specifies how wide the
 
 Retrieving the position from the Paned widget is done via the method::
 
-  position = paned.get_position()
+  paned.get_position()
 
 The *position* value returned is the number of pixels wide the left or top pane is. This is useful when saving the application configuration to a file.
 

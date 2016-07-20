@@ -14,9 +14,9 @@ Methods
 =======
 To retrieve the window ID of the Socket call::
 
-  id = socket.get_id()
+  socket.get_id()
 
-When ``.get_id()`` is called, the unique identifier is returned to the *id* variable.
+When ``.get_id()`` is called, the unique identifier is for the running socket is returned.
 
 .. note: Before using the ``.get_id()`` method the Socket must have already been added to the toplevel window.
 

@@ -7,14 +7,14 @@ Methods
 =======
 The selected items can be fetched from the RecentChooser using::
 
-  item = recentchooser.get_current_item()
-  uri = recentchooser.get_current_uri()
+  recentchooser.get_current_item()
+  recentchooser.get_current_uri()
 
 Both the ``.get_current_item()`` and ``.get_current_uri()`` methods return a single item.
 
 If multiple item selection is enabled, the method to use to return all selected items is::
 
-  items = recentchooser.get_items()
+  recentchooser.get_items()
 
 If a file can not be found, it may be useful to customise whether it can be viewed in the recent list::
 
@@ -61,7 +61,7 @@ In the case of ``.add_filter()``, ``.set_filter()``, and ``.remove_filter()``, t
 
 A list of RecentFilter objects attached to the RecentChooser can be found via::
 
-  filters = recentchooser.list_filters()
+  recentchooser.list_filters()
 
 =======
 Signals

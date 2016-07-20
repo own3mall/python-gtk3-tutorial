@@ -33,9 +33,9 @@ A ``"font-set"`` signal emits from the FontButton when a font has been selected 
 
 If only certain elements of the font selected are required use the following methods::
 
-  font_face = fontbutton.get_font_face()
-  font_size = fontbutton.get_font_size()
-  font_desc = fontbutton.get_font_desc()
+  fontbutton.get_font_face()
+  fontbutton.get_font_size()
+  fontbutton.get_font_desc()
 
 =======
 Example

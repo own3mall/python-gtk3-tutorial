@@ -20,13 +20,13 @@ Methods
 =======
 The ID number of a Plug can be retrieved via::
 
-  id = plug.get_id()
+  plug.get_id()
 
 To check whether a Plug is currently embedded in a Socket use::
 
-  embedded = plug.get_embedded()
+  plug.get_embedded()
 
-When the Plug is embedded, the *embedded* value returns ``True``.
+When the Plug is embedded, the ``.get_embedded()`` method returns ``True``. If the plug has not been inserted, ``False`` is returned.
 
 =======
 Signals

@@ -16,8 +16,8 @@ Methods
 =======
 The value within the SpinButton can be retrieved using one of the following::
 
-  value = spinbutton.get_value()
-  value = spinbutton.get_value_as_int()
+  spinbutton.get_value()
+  spinbutton.get_value_as_int()
 
 When using ``.get_value_as_int()``, the number retrieved from the SpinButton will be in integer format. Alternatively, use ``.get_value()`` if the number needs to be returned as a decimal.
 

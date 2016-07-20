@@ -15,10 +15,10 @@ Methods
 To add the Stack which is to be controlled by the StackSwitcher, call::
 
   stackswitcher.set_stack(stack)
-  
+
 Retrieval of the attached Stack is made with::
 
-  stack = stackswitcher.get_stack()
+  stackswitcher.get_stack()
 
 =======
 Example

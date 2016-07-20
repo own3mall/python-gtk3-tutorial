@@ -14,7 +14,7 @@ Methods
 =======
 To retrieve the current value from the VolumeButton use::
 
-  value = volumebutton.get_value()
+  volumebutton.get_value()
 
 Alternatively, to set a particular value run::
 

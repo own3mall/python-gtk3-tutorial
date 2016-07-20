@@ -14,7 +14,7 @@ Methods
 =======
 To retrieve the state of the Switch as a True or False value::
 
-  active = switch.get_active()
+  switch.get_active()
 
 Alternatively, to set a state on the Switch programmatically::
 

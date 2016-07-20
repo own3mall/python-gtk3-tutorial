@@ -28,6 +28,16 @@ To retrieve the group which the RadioMenuItem is attached::
 
   radiomenuitem.get_group()
 
+The active setting of the RadioMenuItem can be changed using::
+
+  radiomenuitem.set_active(active)
+
+When set to ``True``, the RadioMenuItem will display with a dot next to it.
+
+Retrieval of the active setting can be done by calling::
+
+  radiomenuitem.get_active()
+
 =======
 Signals
 =======

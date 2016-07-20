@@ -8,7 +8,7 @@ TextTag objects are applied to a :doc:`texttagtable`.
 Constructor
 ===========
 The TextTag can be constructed using::
-  
+
   texttag = Gtk.TextTag(name)
 
 A *name* must be applied to the TextTag to identify it. Ideally, it should be descriptive of the properties that the TextTag affects.
@@ -24,7 +24,7 @@ The *priority* is an integer with ``0`` identifying the most important, and the 
 
 Retrieving the priorty can be completed with::
 
-  priority = texttag.get_priority()
+  texttag.get_priority()
 
 The properties should then be applied to the TextTag via::
 

@@ -22,16 +22,16 @@ By default, TextMark objects are not visible, however specifying ``True`` will s
 
 We can also check on the visibility status of a TextMark via::
 
-  visible = textmark.get_visible()
+  textmark.get_visible()
 
 To retrieve the name of a TextMark call::
 
-  name = textmark.get_name()
+  textmark.get_name()
 
 If the TextMark wasn't given a name at construction time, ``None`` will be returned as the name.
 
 A check on whether a TextMark has been deleted can be made using::
 
-  deleted = textmark.get_deleted()
+  textmark.get_deleted()
 
 If ``True`` is returned, the TextMark has been deleted.

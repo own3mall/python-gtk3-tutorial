@@ -18,7 +18,7 @@ To set the permission of the LockButton use the method::
 
 The permission value can also be retrived from the LockButton via::
 
-  permission = lockbutton.get_permission()
+  lockbutton.get_permission()
 
 =======
 Example

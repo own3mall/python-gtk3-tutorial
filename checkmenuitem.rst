@@ -9,6 +9,8 @@ The CheckMenuItem can be constructed using the following::
 
   checkmenuitem = Gtk.CheckMenuItem(label, use_underline)
 
+The *label* parameter specifies the string of text to be displayed in the CheckMenuItem. When *use_underline* is set to ``True``, the character in the label proceeding an underscore will be used as the mnemonic key.
+
 =======
 Methods
 =======
@@ -16,15 +18,15 @@ The label can be applied to the CheckMenuItem after constructing it with::
 
   checkmenitem.set_label(label)
 
-To retrieve the state of the CheckMenuItem use::
-
-  checkmenuitem.get_active()
-
-The state can also be set with::
+The active state can also be set with::
 
   checkmenuitem.set_active(active)
 
 When *active* is set to ``True``, the CheckMenuItem displays a tick in the box indicating an active state.
+
+To retrieve the state of the CheckMenuItem use::
+
+  checkmenuitem.get_active()
 
 When using multiple CheckMenuItem widgets, it may be necessary to indicate an inconsistent state if all other items in the group have a ``True`` or ``False`` value. This can be set via::
 
