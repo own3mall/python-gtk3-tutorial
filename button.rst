@@ -28,9 +28,11 @@ By default, all Button widgets have a border around them. This can be configured
 
 The *relief* parameter can be set as follows, with the default being ``Gtk.BorderRelief.NORMAL``. The alternatives are ``Gtk.ReliefStyle.HALF`` which shows no border when the mouse is not hovering over the widget, or ``Gtk.ReliefStyle.NONE`` in which no border is shown at all.
 
-It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function.
+It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function. This is set via::
 
-  button.set_use_underline(use_underline)
+  button.set_use_underline(underline)
+
+When *underline* is set to ``True``, the letter after the underscore in the label string will be used as the mnemonic shortcut.
 
 .. note:
 

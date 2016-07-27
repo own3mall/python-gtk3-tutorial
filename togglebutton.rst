@@ -11,9 +11,25 @@ A ToggleButton can be constructed using the following::
 
   togglebutton = Gtk.ToggleButton(label)
 
+A *label* should be defined which is used to identify the purpose of the ToggleButton widget.
+
 =======
 Methods
 =======
+The ToggleButton label can be set after construction by the method::
+
+  togglebutton.set_label(label)
+
+It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function. This is set via::
+
+  togglebutton.set_use_underline(underline)
+
+When *underline* is set to ``true``, the letter after the underscore in the label string will be used as the mnemonic shortcut.
+
+.. note:
+
+  Mnemonic shortcuts are highly useful as an accessibility feature and should be used wherever possible. They are particularly important to people with disabilities as they provide quick access to common functions. To access the function using the mnemonic, hold down :kbd:`Alt` and the appropriate character.
+
 To retrieve the state of a ToggleButton use::
 
   togglebutton.get_active()

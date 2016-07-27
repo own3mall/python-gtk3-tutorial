@@ -1,6 +1,6 @@
 RadioButton
 ===========
-RadioButton widgets are similar to CheckButton widgets, however they allow only one of a group of RadioButton widgets to be selected at any one time. When another RadioButton in the group is selected, the active state of the button is switched to that and removed from the previous one which was chosen.
+RadioButton widgets are similar to :doc:`checkbutton` widgets, however they allow only one of a group of RadioButton widgets to be selected at any one time. When another RadioButton in the group is selected, the active state of the button is switched to that and removed from the previous one which was chosen.
 
 A RadioButton is based on the :doc:`togglebutton` widget, and inherits many of the same methods, properties and signals.
 
@@ -24,9 +24,11 @@ The label associated with the RadioButton can be set after constructing with::
 
   radiobutton.set_label(label)
 
-It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function.
+It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function. This is set via::
 
-  radiobutton.set_use_underline(use_underline)
+  radiobutton.set_use_underline(underline)
+
+When *underline* is set to ``true``, the letter after the underscore in the label string will be used as the mnemonic shortcut.
 
 .. note:
 
@@ -51,6 +53,12 @@ To retrieve whether a RadioButton is set as inconsistent use::
   radiobutton.get_inconsistent()
 
 If the RadioButton is in an inconsistent state, ``True`` will be returned.
+
+The indicator circle displaying the active setting of the RadioButton can be removed from view via::
+
+  radiobutton.set_mode(mode)
+
+When *mode* is set to ``False``, the RadioButton will display like a standard Button. This mode may be used to create a button array similar to those used by the StackSwitcher. Its use does not change the functionality of the RadioButton.
 
 =======
 Signals

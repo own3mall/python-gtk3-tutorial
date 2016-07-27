@@ -1,6 +1,6 @@
 CheckButton
 ===========
-A CheckButton displays a small box which is allowed to be in one of three states; checked, unchecked or inconsistent. It is displayed with a Label next to it indicating what function the CheckButton performs.
+A CheckButton displays a small box which is allowed to be in one of three states; checked, unchecked or inconsistent. It is displayed with a :doc:`label` next to it indicating what function the CheckButton performs.
 
 A CheckButton is based on the :doc:`togglebutton` widget, and inherits many of the same methods, properties and signals.
 
@@ -20,9 +20,11 @@ The label on the CheckButton is definable after construction via::
 
   checkbutton.set_label(label)
 
-It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function.
+It is good practice to use a mnemonic in the label. This requires an underscore inserted into the label (e.g. "_Cancel"). GTK+ parses the underscore and converts it into an underline beneath the following character, which the user can then access as a shortcut to the function. This is set via::
 
-  checkbutton.set_use_underline(use_underline)
+  checkbutton.set_use_underline(underline)
+
+When *underline* is set to ``True``, the letter after the underscore in the label string will be used as the mnemonic shortcut.
 
 .. note:
 
