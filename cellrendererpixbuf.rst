@@ -23,6 +23,8 @@ The configuration of the CellRendererPixbuf is made using the property functions
 The property items available for use with the CellRendererPixbuf are:
 
 * ``"pixbuf"`` - the pixbuf value sets the location of the Pixbuf image format to display in the cell.
+* ``"icon-name"`` - an icon name to load from the theme.
+* ``"gicon"`` - a GIcon object to display.
 
 =======
 Example

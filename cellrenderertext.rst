@@ -13,13 +13,6 @@ The CellRendererText can be constructed using the following::
 
   cellrenderertext = Gtk.CellRendererText()
 
-=======
-Methods
-=======
-CellRenderer widgets only use one method which is used to set the styling functions of the cell::
-
-  cellrenderertext.set_property(property, value)
-
 ==========
 Properties
 ==========

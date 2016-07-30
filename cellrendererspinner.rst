@@ -1,6 +1,6 @@
 CellRendererSpinner
 ===================
-The CellRendererSpinner provides a :doc:`spinner` widget within a TreeView, to indicate activity of a job.
+The CellRendererSpinner provides a :doc:`spinner` widget within a TreeView, to indicate activity of a job. It is commonly use to indicate the activity of a process whose length is unknown. An alternative when the length of the process is known is the :doc:`cellrendererprogress`.
 
 .. note::
 

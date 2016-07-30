@@ -1,6 +1,6 @@
 CellRendererProgress
 ====================
-A CellRendererProgress allows for the displaying of a :doc:`progressbar` within a TreeView to show the status, or percentage completion of a task.
+A CellRendererProgress allows for the displaying of a :doc:`progressbar` within a TreeView to show the status, or percentage completion of a task. If the process length is unknown, it is preferable to use the :doc:`cellrendererspinner`.
 
 .. note::
 

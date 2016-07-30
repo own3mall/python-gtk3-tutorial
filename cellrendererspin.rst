@@ -13,13 +13,6 @@ The CellRendererSpin can be constructed using the following::
 
   cellrendererspin = Gtk.CellRendererSpin()
 
-=======
-Methods
-=======
-The method for setting properties on a CellRendererSpin via::
-
-  cellrendererspin.set_property(property, value)
-
 ==========
 Properties
 ==========

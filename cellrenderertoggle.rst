@@ -16,10 +16,6 @@ The CellRendererToggle can be constructed using the following::
 =======
 Methods
 =======
-CellRenderer widgets only use one method which is used to set the styling functions of the cell::
-
-  cellrenderertoggle.set_property(property, value)
-
 By default, the CellRendererToggle is drawn as a CheckButton. This can be changed to a RadioButton using::
 
   cellrenderertoggle.set_radio(radio)
@@ -39,11 +35,11 @@ To prevent a CellRendererToggle from being activated::
 ==========
 Properties
 ==========
-The configuration of the CellRendererSpin is made using the property functions::
+The configuration of the CellRendererToggle is made using the property functions::
 
-  cellrendererspin.set_property("item", value)
+  cellrenderertoggle.set_property("item", value)
 
-The property items available for use with the CellRendererSpin are:
+The property items available for use with the CellRendererToggle are:
 
 * ``"activatable"`` - customise whether the CellRendererToggle is activatable.
 * ``"active"`` - this toggles the state of the CellRendererToggle.
